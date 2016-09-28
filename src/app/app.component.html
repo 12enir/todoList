@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<ul>
+  <li *ngFor="let todo of todoList; let i=index">{{todo.name}} | <button (click)="deleteToDo(i)">x</button></li>
+</ul>
+
+<input (keypress)="doKey($event, task)" type="text" [(ngModel)]="task"/> <button (click)="addToDo(task)">Add</button>
